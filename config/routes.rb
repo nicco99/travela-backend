@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :buses
-  resources :passengers
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :buses
+  resources :routes
+  resources :bookings
+  resources :passengers
+
 end
