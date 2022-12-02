@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rce: MyString
+  trip: MyString
+  bus_id: 1
+  route_id: 1
+  depature: MyString
+
+two:
+  rce: MyString
+  trip: MyString
+  bus_id: 1
+  route_id: 1
+  depature: MyString
