@@ -5,7 +5,7 @@ class CreateTrips < ActiveRecord::Migration[7.0]
       t.string :trip
       t.integer :bus_id
       t.integer :route_id
-      t.string :depature
+      t.string :departure
 
       t.timestamps
     end
