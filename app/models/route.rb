@@ -1,5 +1,5 @@
 class Route < ApplicationRecord
-    has_many :trips 
+    has_many :trips, dependent: :destroy
     has_many :buses, through: :trips
 
     validates :price, presence: true, numericality: true

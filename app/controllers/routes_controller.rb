@@ -28,6 +28,13 @@ rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_resp
         render json: route, status: :created
     end
 
+    # DELETE /routes/:id
+    def destroy
+        route = find
+        route.destroy
+        head :no_content
+    end
+
     private
 
     def find
