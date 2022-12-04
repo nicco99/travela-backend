@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_04_065017) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_04_081835) do
   create_table "bookings", force: :cascade do |t|
     t.integer "trip_id"
     t.integer "passenger_id"
     t.string "departure"
-    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
   end
 
   create_table "buses", force: :cascade do |t|
@@ -48,13 +48,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_04_065017) do
   create_table "routes", force: :cascade do |t|
     t.string "name"
     t.integer "price"
-    t.string "start"
-    t.string "destination"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "start"
+    t.string "destination"
   end
 
   create_table "trips", force: :cascade do |t|
+    t.string "trip"
     t.integer "bus_id"
     t.integer "route_id"
     t.string "departure"
