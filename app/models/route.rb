@@ -1,6 +1,10 @@
 class Route < ApplicationRecord
-
     has_many :trips 
     has_many :buses, through: :trips
+
+    validates :price, presence: true, numericality: true
+    validates :start, presence: true, inclusion: {in: ["Mombasa", "Nairobi", "Nakuru"]}
+    validates :destination, presence: true, inclusion: {in: ["Mombasa", "Nairobi", "Nakuru"]}
+
 end
 
