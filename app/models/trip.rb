@@ -4,5 +4,9 @@ class Trip < ApplicationRecord
 
     has_many :bookings 
     has_many :passengers, through: :bookings
+
+    validates :bus_id, presence: true
+    validates :route_id, presence: true
+    validates :departure, presence: true
 end
 
