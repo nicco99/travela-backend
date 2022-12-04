@@ -9,7 +9,7 @@ class RoutesController < ApplicationController
     # GET /routes/:id
     def show
         route = find
-        render json: route
+        render json: route, serializer: SpecificRouteSerializer
     end
 
     # PATCH /routes/:id
