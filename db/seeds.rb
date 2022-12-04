@@ -14,7 +14,6 @@ Route.create(start: "NAKURU", destination: "NAIROBI", price: 1000, name:"NKR-NRB
 Passenger.create(username: "nicco", email:"nicco@gmail.com", p_number: 254714352748, password_digest:"hellooo")
 
 
-
 Trip.create(bus_id: 1 , route_id: 1, departure: Time.new(2022, 12 , 5, 8, 00))
 Trip.create(bus_id: 2 , route_id: 2, departure: Time.new(2022, 12 , 5, 9, 00))
 Trip.create(bus_id: 3 , route_id: 3, departure: Time.new(2022, 12 , 5, 10, 00))
