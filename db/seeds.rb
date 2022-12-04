@@ -1,10 +1,5 @@
 puts "🌱 Seeding..."
 
-Booking.create(trip_id: 1, passenger_id: 1, departure: Time.new(2022, 12 , 5, 8, 00), status:"Paid")
-Booking.create(trip_id: 2, passenger_id: 1, departure: Time.new(2022, 12 , 5, 9, 00), status:"Cancelled")
-Booking.create(trip_id: 2, passenger_id: 2, departure: Time.new(2022, 12 , 5, 10, 00), status:"Confirmed")
-Booking.create(trip_id: 1, passenger_id: 2, departure: Time.new(2022, 12 , 5, 11, 00), status: "Pending")
-
 Bus.create(seats: 35, number_plate: "KBX 345Y", driver_number: 254712345678)
 Bus.create(seats: 55, number_plate: "KCX 944G", driver_number: 254716344678)
 Bus.create(seats: 35, number_plate: "KBV 843H", driver_number: 254712345678)
