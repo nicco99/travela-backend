@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :reviews
-  resources :trips
+  resources :trips, only: [:index, :show, :create]
   resources :buses
   resources :routes, only: [:index, :show, :update, :create, :destroy]
   resources :bookings
