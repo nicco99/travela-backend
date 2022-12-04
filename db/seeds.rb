@@ -5,8 +5,6 @@ Booking.create(trip_id: 2, passenger_id: 1, departure: "0900", start:"Nairobi", 
 Booking.create(trip_id: 2, passenger_id: 2, departure: "1900", start:"Nairobi", destination: "Mombasa")
 Booking.create(trip_id: 1, passenger_id: 2, departure: "1900", start: "Mombasa", destination: "Nairobi")
 
-
-
 Route.create(name: "Nairobi-Mombasa",price: 800, )
 Route.create(name: "Mombasa-Nairobi",price: 1200, )
 
