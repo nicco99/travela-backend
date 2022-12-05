@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :trips, only: [:index, :show, :create]
   resources :buses
   resources :routes, only: [:index, :show, :update, :create, :destroy]
-  resources :bookings
+  resources :bookings, only: [:show, :create]
 
-  resources :passengers
+  resources :passengers, only:[:index] do 
+    resources :bookings, only: [ :index]
+  end
 end
