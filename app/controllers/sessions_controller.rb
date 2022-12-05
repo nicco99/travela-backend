@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
         passenger = Passenger.all 
         render json: passenger
         end
-
     def create
         passenger = Passenger.find_by(email: params[:email])
         if passenger &.authenticate(params[:password])
