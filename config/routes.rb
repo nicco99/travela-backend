@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :passengers, only:[:index] do 
     resources :bookings, only: [ :index]
   end
+  
+  resources :sessions, only: [:create, :destroy]
 end
