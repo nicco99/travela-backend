@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :bookings
 
   resources :passengers
+
+  resources :sessions, only: [:create, :destroy]
 end
