@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  resources :reviews
+  resources :reviews, only: [:create,:index]
   resources :trips, only: [:index, :show, :create]
-  get 'filtered', to: 'trips#filtered'
-
   resources :buses
+  resource :transactions, only: [:create]
   resources :routes
-  resources :bookings, only: [:index, :create]
+  resources :bookings, only: [:index,:show]
   resources :passengers, only: [:create]
   resources :sessions, only: [:create, :destroy]
 end
