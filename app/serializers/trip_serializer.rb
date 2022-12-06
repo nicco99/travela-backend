@@ -1,5 +1,5 @@
 class TripSerializer < ActiveModel::Serializer
-  attributes :id, :bus_id, :route_id, :departure
+  attributes :id , :departure[0..15]
 belongs_to :bus
 belongs_to :route
 end

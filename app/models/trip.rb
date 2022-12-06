@@ -8,5 +8,9 @@ class Trip < ApplicationRecord
     validates :bus_id, presence: true
     validates :route_id, presence: true
     validates :departure, presence: true
+
+    def where start, destination
+        Trip.where( start: start, destination: destination)
+    end
 end
 

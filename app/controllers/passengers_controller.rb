@@ -7,7 +7,16 @@ def create
     else 
         render json: {errors: passenger.errors.full_messages}, status: :unprocessable_entity
     end 
-  end 
+end 
+
+def show
+  user = Passenger.find(session[:passenger_id])
+  if user 
+    render json: user
+  else
+    render json: {error: "Not authorized"}, status: :unauthorized
+  end
+end
 
 
 private 
@@ -18,4 +27,6 @@ end
 def authorize
     return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :passenger_id
   end
+
+
 end
