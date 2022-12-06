@@ -9,7 +9,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_resp
     end
 
     def show
-        trip = find
+        trip = Trip.find_by(id: params[:id])
         render json: trip
     end
 

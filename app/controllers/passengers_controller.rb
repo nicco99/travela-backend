@@ -9,10 +9,24 @@ def create
     end 
 end 
 
+def show
+  user = Passenger.find(session[:passenger_id])
+  if user 
+    render json: user
+  else
+    render json: {error: "Not authorized"}, status: :unauthorized
+  end
+end
+
 
 private 
 def passenger_params
     params.permit(:username, :password, :email, :p_number, :s
     )
 end
+def authorize
+    return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :passenger_id
+  end
+
+
 end
