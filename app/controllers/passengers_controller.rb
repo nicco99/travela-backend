@@ -12,6 +12,7 @@ end
 
 private 
 def passenger_params
-    params.permit(:username, :password, :email, :p_number, :password_confirmation)
+    params.permit(:username, :password, :email, :p_number, :s
+    )
 end
 end
