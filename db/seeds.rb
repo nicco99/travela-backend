@@ -44,9 +44,11 @@ Trip.create(bus_id: 1 , route_id: 2, departure: Time.new(2022, 12 , 10, 9, 00))
 Trip.create(bus_id: 4 , route_id: 3, departure: Time.new(2022, 12 , 10, 10, 00))
 Trip.create(bus_id: 3 , route_id: 4, departure: Time.new(2022, 12 , 10, 11, 00))
 
-Booking.create!(trip_id: 1, passenger_id: 1,departure: "11:00",status: "pending")
-Booking.create!(trip_id: 2, passenger_id: 1,departure: "11:00",status: "pending")
-Booking.create!(trip_id: 3, passenger_id: 1,departure: "11:00",status: "pending")
-Booking.create!(trip_id: 4, passenger_id: 1,departure: "11:00",status: "pending")
+Booking.create!(trip_id: 1, passenger_id: 1,status: "pending")
+Booking.create!(trip_id: 2, passenger_id: 1,status: "pending")
+Booking.create!(trip_id: 3, passenger_id: 1,status: "pending")
+Booking.create!(trip_id: 4, passenger_id: 1, status: "pending")
+
+Review.create(comment: "jwdnncejncne",rating: 2,booking_id: 1 )
 
 puts "✅ Done seeding!"
