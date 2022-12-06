@@ -1,9 +1,6 @@
 class PassengersController < ApplicationController
-    before_action :authorize
-    skip_before_action :authorize, only: [:create]
 
-
-  def create 
+def create 
     passenger = Passenger.create(passenger_params)
     if passenger.valid?
         render json: passenger, status: :created
@@ -15,7 +12,8 @@ class PassengersController < ApplicationController
 
 private 
 def passenger_params
-    params.permit(:username, :password, :email, :p_number, :password, :confirm_password)
+    params.permit(:username, :password, :email, :p_number, :s
+    )
 end
 def authorize
     return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :passenger_id

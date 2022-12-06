@@ -1,3 +1,5 @@
 class BookingSerializer < ActiveModel::Serializer
-  attributes :id, :trip_id, :passenger_id, :departure, :status
+  attributes :id, :status
+  belongs_to :trip
+  belongs_to :passenger
 end
