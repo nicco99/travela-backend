@@ -1,13 +1,13 @@
 
+class CreateBookings < ActiveRecord::Migration[7.0]
+  def change
+    create_table :bookings do |t|
+      t.integer :trip_id
+      t.integer :passenger_id
+      t.string :departure
+      t.string :status
 
-class CreateBookings < ActiveRecord::Migration[6.1]
-def change
-  create_table :bookings do |t|
-    t.integer :trip_id
-    t.integer :passenger_id
-    t.string :departure
-    t.string :status
-
-    t.timestamps
+      t.timestamps
+    end
   end
 end
