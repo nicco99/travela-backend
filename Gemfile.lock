@@ -87,6 +87,7 @@ GEM
       concurrent-ruby (~> 1.0)
     json (2.6.3)
     jsonapi-renderer (0.2.2)
+    jwt (2.5.0)
     loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -162,6 +163,7 @@ DEPENDENCIES
   byebug
   excon
   json
+  jwt (~> 2.5)
   puma (~> 5.0)
   rack-cors (~> 1.1, >= 1.1.1)
   rails (~> 7.0.4)

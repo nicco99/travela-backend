@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :bookings, only: [:index,:show]
   resources :passengers, only: [:create]
   resources :sessions, only: [:create, :destroy]
+  post 'login', to: 'auth#create'
 end
