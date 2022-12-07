@@ -49,6 +49,6 @@ Booking.create!(trip_id: 2, passenger_id: 1,status: "pending")
 Booking.create!(trip_id: 3, passenger_id: 1,status: "pending")
 Booking.create!(trip_id: 4, passenger_id: 1, status: "pending")
 
-Review.create(comment: "jwdnncejncne",rating: 2,booking_id: 1 )
+Review.create(comment: "jwdnncejncne",rating: 2,booking_id: 1)
 
 puts "✅ Done seeding!"
