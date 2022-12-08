@@ -12,8 +12,8 @@ Route.create(start: "MOMBASA", destination: "NAIROBI" ,price: 2000, name:"MSA-NR
 Route.create(start: "NAIROBI", destination: "NAKURU", price: 1500, name:"NRB-NKR")
 Route.create(start: "NAKURU", destination: "NAIROBI", price: 1000, name:"NKR-NRB")
 
-Passenger.create(email: "isaac@gmail.com", password:"hellooo", password_confirmation: "hellooo", p_number: "254712345678", username: "isaac" )
-
+Passenger.create(email: "isaac@gmail.com", password:"hellooo", password_confirmation: "hellooo", p_number: "254759597316", username: "isaac" )
+Passenger.create(email: "nicco@gmail.com", password:"1234", password_confirmation: "1234", p_number: "254726555838", username: "nicco" )
 Trip.create(bus_id: 1 , route_id: 1, departure: Time.new(2022, 12 , 5, 8, 00))
 Trip.create(bus_id: 2 , route_id: 2, departure: Time.new(2022, 12 , 5, 9, 00))
 Trip.create(bus_id: 3 , route_id: 3, departure: Time.new(2022, 12 , 5, 10, 00))
