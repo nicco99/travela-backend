@@ -1,7 +1,6 @@
 class AuthController < ApplicationController
     skip_before_action :authorized, only:[:create]
 
-    
     def create
         passenger = Passenger.find_by(email: params[:email])
         if passenger &.authenticate(params[:password])
